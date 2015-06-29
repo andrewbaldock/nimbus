@@ -1,3 +1,5 @@
 
-src/scripts/vendor/
 dist/
+node_modules/
+src/scripts/vendor/
+
