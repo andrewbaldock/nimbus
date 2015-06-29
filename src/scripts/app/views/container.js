@@ -19,6 +19,7 @@ define(function (require) {
 
       this.homeView = new HomeView({state: this.state});
       this.nimbusView = new NimbusView({state: this.state});
+      // add new modules here [1 of 5]
     },
 
     render: function() {
@@ -28,16 +29,29 @@ define(function (require) {
     handleViewChange: function(state) {
       this.removeSubViews();
       var view = this.homeView;
+
       if(state.get('view') === 'nimbus') {
         view = this.nimbusView;
       }
+      // add new modules here [2 of 5]
+
       this.$('.container').html(view.render().el);
     },
 
     removeSubViews: function() {
       this.homeView.remove();
       this.nimbusView.remove();
+      // add new modules here [3 of 5]
     },
+
+    /* ----------------------------------------------------------------------------------------
+
+    Adding a new module?  Add at the above listed points, then also:
+
+    [4 of 5] add the modules' routes to /src/scripts/app/router.js
+    [5 of 5] add the modules style.css to the @imports at top of  /src/scripts/nimbus/style.css
+
+     ---------------------------------------------------------------------------------------- */
 
   })
 

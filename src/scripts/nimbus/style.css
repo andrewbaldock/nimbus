@@ -4,3 +4,11 @@
 .nimbus a {
   font-size: 14px;
 }
+.nimbus .logo {
+  background-image: url('/img/favicon.png');
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
