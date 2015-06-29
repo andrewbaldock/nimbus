@@ -7,16 +7,9 @@ define(function (require) {
 
   var App = Backbone.View.extend({
 
-    el: '.app-content',
-
     initialize: function() {
-      console.log('wahoo');
       Backbone.history.start();
-    },
-
-    render: function() {
-      this.$el.html('<div>YO</div>');
-    },
+    }
 
   })
   return App;
