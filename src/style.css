@@ -1,0 +1,36 @@
+@import 'scripts/home/style.css';
+@import 'scripts/nimbus/style.css';
+
+body,
+html {
+  overflow-x:hidden;
+}
+
+body {
+    background-color: #ffffff;
+    font-family:  'Open Sans', Arial, Helvetice Neue, sans-serif;
+    font-size: 20px;
+
+  font-weight: 300;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-content {
+  border: 1px solid #555;
+  border-radius: 3px;
+  display: inline-block;
+  width: 100%;
+  position: inherit;
+  padding: 10%;
+  margin: 10%;
+}
+
+
