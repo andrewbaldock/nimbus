@@ -1,8 +1,7 @@
 .nimbus p {
-  font-size: 28px;
-}
-.nimbus a {
-  font-size: 14px;
+  font-size: 36px;
+  color: #43609C;
+  margin-top: 5px;
 }
 .nimbus .logo {
   background-image: url('/img/favicon.png');
@@ -11,4 +10,5 @@
   display: block;
   width: 100px;
   height: 100px;
+  margin-top: 30px;
 }

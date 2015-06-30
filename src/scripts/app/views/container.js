@@ -36,12 +36,18 @@ define(function (require) {
       // add new modules here [2 of 5]
 
       this.$('.container').html(view.render().el);
+      this.updateNav();
     },
 
     removeSubViews: function() {
       this.homeView.remove();
       this.nimbusView.remove();
       // add new modules here [3 of 5]
+    },
+
+    updateNav: function() {
+      this.$('.global-nav a').removeClass('clicked');
+      this.$('.global-nav #' + this.state.get('view')).addClass('clicked');
     },
 
     /* ----------------------------------------------------------------------------------------

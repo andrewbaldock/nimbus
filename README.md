@@ -33,4 +33,8 @@ Browse to [localhost:3000](http://localhost:3000/)
 r.js -o build/app.build.js
 ```
 
-TODO: use gulp
+TODO:
+ - use gulp
+ - sass
+ - testing
+

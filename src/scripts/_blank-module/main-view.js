@@ -4,7 +4,7 @@ define(function (require) {
 
   var Backbone = require('backbone');
 
-  var tpl = require('text!home/templates/home.ejs');
+  var tpl = require('text!_blank-module/templates/main-view.ejs');
   var template = _.template(tpl);
 
   return Backbone.View.extend({

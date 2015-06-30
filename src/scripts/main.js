@@ -6,6 +6,7 @@ require.config({
     'backbone': '../bower_components/backbone/backbone',
   },
   shim: {
+    // handle non-amd libraries
     'underscore': {
         exports: '_'
     },
