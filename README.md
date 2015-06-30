@@ -16,9 +16,6 @@ Let's now install the dependencies for this project. I'm assuming that we're bui
 
     bower install
 
-> Please note that we're using the AMD versions of both Backbone and Underscore to make the setup process as easy as possible.
-
-
 
 ## launching the node server
 
