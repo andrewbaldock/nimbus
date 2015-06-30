@@ -1,5 +1,7 @@
 # Nimbus -- cloud frontend app
 
+Backbone, require, node, express
+
 ## Setup
 
 First, of course, download this repo. Then, from the Terminal (assuming Node.js installed), install RequireJS.
@@ -35,6 +37,8 @@ r.js -o build/app.build.js
 
 TODO:
  - use gulp
+ - add mongo
+ - add react
  - sass
  - testing
 
