@@ -1,5 +1,5 @@
 
 dist/
 node_modules/
-src/scripts/vendor/
+src/bower_components/
 

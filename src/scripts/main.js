@@ -1,9 +1,17 @@
 require.config({
   paths: {
-    'jquery': 'vendor/jquery/dist/jquery',
-    'underscore': 'vendor/underscore-amd/underscore',
-    'text': 'vendor/requirejs-text/text',
-    'backbone': 'vendor/backbone-amd/backbone',
+    'jquery': '../bower_components/jquery/dist/jquery',
+    'underscore': '../bower_components/underscore/underscore',
+    'text': '../bower_components/requirejs-text/text',
+    'backbone': '../bower_components/backbone/backbone',
+  },
+  shim: {
+    'underscore': {
+        exports: '_'
+    },
+    'backbone': {
+        exports: 'Backbone'
+    }
   }
 });
 
