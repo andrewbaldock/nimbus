@@ -27,9 +27,16 @@ define(function (require) {
     },
 
     handleViewChange: function(state) {
+      var view;
       this.removeSubViews();
-      var view = this.homeView;
 
+      if (!state.get('view')) {
+        state.set('view', 'home');
+      }
+
+      if(state.get('view') === 'home') {
+        view = this.homeView;
+      }
       if(state.get('view') === 'nimbus') {
         view = this.nimbusView;
       }
