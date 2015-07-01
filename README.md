@@ -29,7 +29,7 @@ Browse to [localhost:3000](http://localhost:3000/)
 ## doing a requirejs build
 
 ```
-r.js -o build/app.build.js
+r.js -o src/build/app.build.js
 ```
 
 TODO:
