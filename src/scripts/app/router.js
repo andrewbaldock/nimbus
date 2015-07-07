@@ -9,7 +9,7 @@ define(function (require) {
 
     var AppRouter = Backbone.Router.extend({
         routes: {
-            '':       'home',
+            '':       'nimbus',
             'home':   'home',
             'nimbus': 'nimbus'
         },

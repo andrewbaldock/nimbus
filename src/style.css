@@ -37,6 +37,7 @@ body {
   -webkit-text-size-adjust: 100%;
   width: 100%;
   display: flex;
+  color: #5C68A2;
 }
 
 div {
@@ -45,6 +46,12 @@ div {
 
 a {
   text-decoration: none;
+  color: #009BC8;
+}
+
+a:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .global-nav,
@@ -53,7 +60,7 @@ a {
 }
 
 .global-nav a.clicked {
-  color: black;
+  color: #5C68A2;
   font-weight: 800;
 }
 
@@ -66,6 +73,10 @@ a {
   padding: 5%;
   margin: 5%;
   text-align: center;
+}
+
+.description {
+  font-size: 13px;
 }
 
 
