@@ -3,8 +3,10 @@ define(function (require) {
   'use strict';
 
   var Backbone = require('backbone');
+
   var HomeView = require('home/home');
   var NimbusView = require('nimbus/nimbus');
+  var SkylabView = require('skylab/main-view');
 
   var tpl = require('text!app/templates/container.ejs');
   var template = _.template(tpl);
@@ -16,10 +18,7 @@ define(function (require) {
     initialize: function(options) {
       this.state = options.state;
       this.listenTo(this.state, 'change:view', this.handleViewChange);
-
-      this.homeView = new HomeView({state: this.state});
-      this.nimbusView = new NimbusView({state: this.state});
-      // add new modules here [1 of 5]
+      this.view;
     },
 
     render: function() {
@@ -27,29 +26,32 @@ define(function (require) {
     },
 
     handleViewChange: function(state) {
-      var view;
-      this.removeSubViews();
+      if (this.view) {
+        this.removeSubViews();
+      }
 
+      // default
       if (!state.get('view')) {
         state.set('view', 'home');
       }
 
       if(state.get('view') === 'home') {
-        view = this.homeView;
+        this.view = new HomeView({state: this.state});
       }
       if(state.get('view') === 'nimbus') {
-        view = this.nimbusView;
+        this.view = new NimbusView({state: this.state});
       }
-      // add new modules here [2 of 5]
+      if(state.get('view') === 'skylab') {
+        this.view = new SkylabView({state: this.state});
+      }
+      // add new modules here [1 of 3]
 
-      this.$('.container').html(view.render().el);
+      this.$('.container').html(this.view.render().el);
       this.updateNav();
     },
 
     removeSubViews: function() {
-      this.homeView.remove();
-      this.nimbusView.remove();
-      // add new modules here [3 of 5]
+      this.view.remove();
     },
 
     updateNav: function() {
@@ -57,12 +59,17 @@ define(function (require) {
       this.$('.global-nav #' + this.state.get('view')).addClass('clicked');
     },
 
+    remove: function() {
+      this.removeSubViews();
+      Backbone.View.prototype.remove.apply(this,arguments);
+    }
+
     /* ----------------------------------------------------------------------------------------
 
     Adding a new module?  Add at the above listed points, then also:
 
-    [4 of 5] add the modules' routes to /src/scripts/app/router.js
-    [5 of 5] add the modules style.css to the @imports at top of  /src/scripts/nimbus/style.css
+    [2 of 3] add the modules' routes to /src/scripts/app/router.js
+    [3 of 3] add the modules style.css to the @imports at top of  /src/scripts/nimbus/style.css
 
      ---------------------------------------------------------------------------------------- */
 

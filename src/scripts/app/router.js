@@ -11,7 +11,8 @@ define(function (require) {
         routes: {
             '':       'nimbus',
             'home':   'home',
-            'nimbus': 'nimbus'
+            'nimbus': 'nimbus',
+            'skylab': 'skylab'
         },
 
         initialize: function(){
@@ -31,7 +32,12 @@ define(function (require) {
         nimbus: function() {
             this.container.render();
             this.state.set('view', 'nimbus');
-        }
+        },
+
+        skylab: function() {
+            this.container.render();
+            this.state.set('view', 'skylab');
+        },
 
     });
 
