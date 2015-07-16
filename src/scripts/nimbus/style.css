@@ -1,10 +1,9 @@
-.nimbus p {
+.nimbus .title {
   font-size: 36px;
-  color: #43609C;
   margin-top: 5px;
 }
 .nimbus .logo {
-  background-image: url('/img/favicon.png');
+  background-image: url('../../img/favicon.png');
   background-size: 100px 100px;
   background-repeat: no-repeat;
   display: inline-block;

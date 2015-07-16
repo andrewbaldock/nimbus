@@ -1,6 +1,8 @@
+@import 'bower_components/spinkit/css/spinkit.css';
+@import 'bower_components/spinkit/css/spinners/3-wave.css';
 @import 'scripts/home/style.css';
 @import 'scripts/nimbus/style.css';
-
+@import 'scripts/skylab/style.css';
 
 /* RESET
 -----------------------------------------------*/
@@ -19,7 +21,7 @@ h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
 /* GLOBAL
 -----------------------------------------------*/
 .start-hidden {
-    display: none;
+  display: none;
 }
 
 body,
@@ -37,14 +39,21 @@ body {
   -webkit-text-size-adjust: 100%;
   width: 100%;
   display: flex;
+  color: #5C68A2;
 }
 
 div {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a {
   text-decoration: none;
+  color: #009BC8;
+}
+
+a:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .global-nav,
@@ -53,7 +62,7 @@ a {
 }
 
 .global-nav a.clicked {
-  color: black;
+  color: #5C68A2;
   font-weight: 800;
 }
 
@@ -66,6 +75,10 @@ a {
   padding: 5%;
   margin: 5%;
   text-align: center;
+}
+
+.description {
+  font-size: 13px;
 }
 
 

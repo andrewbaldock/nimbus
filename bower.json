@@ -6,6 +6,7 @@
     "backbone": null,
     "underscore": null,
     "requirejs": null,
-    "requirejs-text": null
+    "requirejs-text": null,
+    "spinkit": "~1.0.1"
   }
 }
