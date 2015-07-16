@@ -17,7 +17,9 @@ define(function (require) {
     render: function() {
       //this.$el.html(template(this));
       var artUrl = this.model.get('artwork_url') ? this.model.get('artwork_url') : this.model.get('user').avatar_url;
-      var output = '<a class="track" target="_track" href="' + this.model.get('permalink_url') + '"><img src="' + artUrl + '"><br>' + this.model.get('id') + ' ' + this.model.get('title') + '</a>';
+      var output = '<a class="track" target="_track" href="'
+        + this.model.get('permalink_url') + '"><img src="' + artUrl + '"><br><p>'
+        + this.model.get('title') + '</p></a>';
       this.$el.html(output);
       return this;
     },

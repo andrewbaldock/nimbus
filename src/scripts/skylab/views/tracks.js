@@ -14,12 +14,18 @@ define(function (require) {
     initialize: function(options) {
       this.state = options.state;
       this.collection = options.collection;
-      this.listenTo(this.collection, 'sync', this.onLoad); // add reset set change
+      this.listenTo(this.state, 'change:searchterm', this.startSearch);
+      this.listenTo(this.collection, 'reset', this.onLoad);
     },
 
     render: function() {
       this.$el.html(template(this));
       return this;
+    },
+
+    startSearch: function() {
+      this.clearTracks();
+      this.$('.spinner').show();
     },
 
     clearTracks: function() {
@@ -33,8 +39,8 @@ define(function (require) {
     },
 
     onLoad: function() {
-      this.clearTracks();
       if(this.collection.length) {
+        this.$('.spinner').hide();
         _.each(this.collection.models, function(model){
           var trackView = new TrackView({model:model});
           this.trackViews.push(trackView);

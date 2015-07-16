@@ -2,20 +2,76 @@
   font-size: 36px;
   color: #43609C;
 }
+.skylab .tracks {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-justify-content: center; /* Safari */
+  justify-content: center;
+  /*margin: 3%;*/
+}
 .skylab .track {
-    display: inline-block;
-    float:left;
-    height: 150px;
-    width: 120px;
-    margin: 15px;
-    overflow-y: hidden;
+  flex: 0 0 150px;
+  margin: 20px;
+  width: 20%;
+/*  display: inline-block;
+  float:left;
+  height: 150px;
+  width: 120px;
+  margin: 15px;
+  overflow-y: hidden;*/
 }
 .skylab .track img {
-    height:100px;
-    width:100px;
+  height:120px;
+  width:120px;
 }
 .skylab a.track {
-    text-decoration: none;
-    font-size:14px;
-    color: rgb(17, 111, 160);
+  text-decoration: none;
+  font-size:14px;
+  color: rgb(17, 111, 160);
 }
+.skylab .track p {
+  font-size: 12px;
+  display: inline-block;
+  max-width: 130px;
+  overflow-y: hidden;
+}
+
+
+/* SPINKIT overrides
+----------------------------------------------- */
+.skylab .sk-spinner-wave.sk-spinner {
+  width: 100%!important;
+  height: 100px;
+}
+
+.skylab .sk-spinner-wave div,
+.skylab .sk-spinner-wave div,   {
+  width: 50px!important;
+}
+
+.skylab .sk-spinner-wave div.cycle {
+  animation: colorchange 30s; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 30s; /* Chrome and Safari */
+
+}
+
+@keyframes colorchange
+{
+  0%   {background-color: pink;}
+  25%  {background-color: purple;}
+  50%  {background-color: blue;}
+  75%  {background-color: pink;}
+  100% {background-color: purple;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background-color: pink;}
+  25%  {background-color: purple;}
+  50%  {background-color: blue;}
+  75%  {background-color: pink;}
+  100% {background-color: purple;}
+}
+

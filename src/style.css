@@ -1,3 +1,5 @@
+@import 'bower_components/spinkit/css/spinkit.css';
+@import 'bower_components/spinkit/css/spinners/3-wave.css';
 @import 'scripts/home/style.css';
 @import 'scripts/nimbus/style.css';
 @import 'scripts/skylab/style.css';
@@ -19,7 +21,7 @@ h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
 /* GLOBAL
 -----------------------------------------------*/
 .start-hidden {
-    display: none;
+  display: none;
 }
 
 body,
@@ -41,7 +43,7 @@ body {
 }
 
 div {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a {
