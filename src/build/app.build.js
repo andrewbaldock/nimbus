@@ -2,7 +2,7 @@
   appDir: '../',
   baseUrl: 'scripts',
   dir: '../../dist',
-  mainConfigFile: '../scripts/main.js',
-  name: 'main',
+  mainConfigFile: '../scripts/require-config.js',
+  name: 'require-config',
   optimizeCss: 'standard'
 })
