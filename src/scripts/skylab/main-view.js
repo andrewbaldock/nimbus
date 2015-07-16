@@ -73,6 +73,16 @@ define(function (require) {
       this.state.set('searchterm', term);
     },
 
+    removeSubViews: function() {
+      this.state.set({searchterm: ''}, {silent: true});
+      this.tracksView.remove();
+    },
+
+    remove: function() {
+      this.removeSubViews();
+      Backbone.View.prototype.remove.apply(this, arguments);
+    }
+
   })
 
 });

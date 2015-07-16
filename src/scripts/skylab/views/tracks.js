@@ -49,6 +49,15 @@ define(function (require) {
       }
     },
 
+    removeSubViews: function() {
+      this.clearTracks();
+    },
+
+    remove: function() {
+      this.removeSubViews();
+      Backbone.View.prototype.remove.apply(this, arguments);
+    }
+
 
   })
 
