@@ -30,12 +30,7 @@ define(function (require) {
         return response.collection;
       },
 
-      // got: function() {
-      //   console.log('searchterm =' + this.state.get('searchterm') + ' yeah');
-      // },
-
       search: function() {
-        console.log('get');
         var pageSize = this.state.get('tracksPerPage');
         var q = this.state.get('searchterm');
 
