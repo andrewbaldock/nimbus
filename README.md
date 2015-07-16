@@ -1,4 +1,5 @@
 # Nimbus -- cloud frontend app
+### with Skylab, soundcloud search app
 
 Backbone, require, node, express
 
