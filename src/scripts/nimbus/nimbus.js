@@ -15,7 +15,13 @@ define(function (require) {
 
     render: function() {
       this.$el.html(template(this));
+      $('body').addClass('nimbus-body');
       return this;
+    },
+
+    remove: function() {
+      $('body').removeClass('nimbus-body');
+      Backbone.View.prototype.remove.apply(this, arguments);
     }
 
   })

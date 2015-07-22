@@ -6,6 +6,9 @@ define(function (require) {
     var Track = require('skylab/models/track');
     var Soundcloud = require('soundcloud');
 
+    var soundcloudClientID = '455ab76a4b27b53d13fd49089b511613';
+    var tracksPerPage = 200;
+
     return Backbone.Collection.extend({
 
       model: Track,
@@ -16,12 +19,11 @@ define(function (require) {
         this.state = options.state;
         this.initSoundcloud();
         this.listenTo(this.state, 'change:searchterm', this.search);
-        // this.data.client_id = this.state.get('soundcloudClientID');
       },
 
       initSoundcloud: function() {
         SC.initialize({
-          client_id: this.state.get('soundcloudClientID'),
+          client_id: soundcloudClientID,
         // redirect_uri: "http://example.com/callback",
         });
       },
@@ -30,27 +32,20 @@ define(function (require) {
         return response.collection;
       },
 
-      // got: function() {
-      //   console.log('searchterm =' + this.state.get('searchterm') + ' yeah');
-      // },
-
       search: function() {
-        console.log('get');
-        var pageSize = this.state.get('tracksPerPage');
         var q = this.state.get('searchterm');
 
         SC.get('/tracks', {
           q: q,
-          limit: pageSize,
-          linked_partitioning: 5
+          limit: tracksPerPage,
+          linked_partitioning: 1
         }, function(tracks, error) {
-          if(error){
-            console.log(error);
-            this.trigger('error', error);
-          }
-
-          tracks = this.parse(tracks);
-          this.reset(tracks);
+            if(error){
+              console.log(error);
+              this.trigger('error', error);
+            }
+            tracks = this.parse(tracks);
+            this.reset(tracks);
         }.bind(this));
       },
 
