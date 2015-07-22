@@ -9,6 +9,8 @@ define(function (require) {
 
   return Backbone.View.extend({
 
+    className: 'track-container',
+
     initialize: function(options) {
       this.state = options.state;
       this.collection = options.collection;

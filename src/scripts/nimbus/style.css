@@ -1,3 +1,11 @@
+.nimbus-body {
+  background-color: rgba(183, 228, 231, 0.33);
+}
+.nimbus-body .app-content {
+  background-color: #313131;
+  border-radius: 3%;
+}
+
 .nimbus .title {
   font-size: 36px;
   margin-top: 5px;
@@ -10,4 +18,15 @@
   width: 100px;
   height: 100px;
   margin-top: 30px;
+  background-color: rgb(92, 146, 162);
+  padding: 20px;
+  background-position: 50%;
+  border-radius: 50%;
+}
+.nimbus a {
+  color: #00C6DB;
+}
+.nimbus,
+.nimbus-body a.clicked {
+  color: #D2D2D2!important;
 }

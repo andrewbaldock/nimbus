@@ -39,13 +39,15 @@ define(function (require) {
     },
 
     onLoad: function() {
+      this.$('.spinner, .load-message').hide();
       if(this.collection.length) {
-        this.$('.spinner').hide();
         _.each(this.collection.models, function(model){
           var trackView = new TrackView({model:model});
           this.trackViews.push(trackView);
           this.$('.tracks').append(trackView.render().el);
         }.bind(this));
+      } else {
+        this.$('.load-message').show();
       }
     },
 

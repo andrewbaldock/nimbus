@@ -10,9 +10,6 @@ define(function (require) {
   var tpl = require('text!skylab/templates/main-view.ejs');
   var template = _.template(tpl);
 
-  var soundcloudClientID = '455ab76a4b27b53d13fd49089b511613';
-  var tracksPerPage = 50;
-
   return Backbone.View.extend({
 
     events: {
@@ -22,11 +19,6 @@ define(function (require) {
 
     initialize: function(options) {
       this.state = options.state;
-      this.state.set({
-        soundcloudClientID: soundcloudClientID,
-        tracksPerPage: tracksPerPage
-      });
-
       this.collection = new TracksCollection({state: this.state});
       this.tracksView = new TracksView({
         state: this.state,
@@ -38,6 +30,7 @@ define(function (require) {
 
     render: function() {
       this.$el.html(template(this));
+      $('body').addClass('skylab-body');
       this.$('.tracks-container').html(this.tracksView.render().el);
       this.autofocusInput();
       return this;
@@ -80,6 +73,7 @@ define(function (require) {
 
     remove: function() {
       this.removeSubViews();
+      $('body').removeClass('skylab-body');
       Backbone.View.prototype.remove.apply(this, arguments);
     }
 
