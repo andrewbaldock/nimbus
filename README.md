@@ -5,36 +5,37 @@ Backbone, require, node, express
 
 ## Setup
 
-1. First, make sure you have node installed: https://nodejs.org/download/
+• First, make sure you have node installed: https://nodejs.org/download/
 
-2. Download this repo. 
+• Download this repo. 
 
-3. Then, from the Terminal (assuming Node.js installed), install RequireJS.
+• Then, from the Terminal (assuming Node.js installed), install RequireJS.
 
 ```
 npm install requirejs
 ```
 
-4. Next, install Bower for dependency management
+• Next, install Bower for dependency management
 
 ```
 npm install bower
 ```
 
-5. Now, in the root directory for the repo, install the dependencies for this project
+• Now, in the root directory for the repo, install the dependencies for this project
 
 ```
 bower install
 ```
 
 
-6. launching the node server.  in the root directory for the repo:
+• Launch the node server.  in the root directory for the repo:
 
 ```
 node server.js
 ```
 
-Browse to [localhost:3000](http://localhost:3000/)
+• Browse to [localhost:3000](http://localhost:3000/)
+
 
 TODO:
  - gulp for builds
