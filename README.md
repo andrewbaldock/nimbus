@@ -11,18 +11,24 @@ Backbone, require, node, express
 
 3. Then, from the Terminal (assuming Node.js installed), install RequireJS.
 
-    npm install requirejs
+```
+npm install requirejs
+```
 
 4. Next, install Bower for dependency management
 
-    npm install bower
+```
+npm install bower
+```
 
-5. Now install the dependencies for this project
+5. Now, in the root directory for the repo, install the dependencies for this project
 
-    bower install
+```
+bower install
+```
 
 
-## launching the node server
+6. launching the node server.  in the root directory for the repo:
 
 ```
 node server.js
