@@ -1,13 +1,13 @@
 .skylab-body {
-  background-color: #8FDCC5;
+  background-color: #4CC0D1;
 }
 .skylab-body .app-content {
-  background-color: #dbdbdb;
+  background-color: #F2F2F2;
 }
 
 
 .skylab p {
-  font-size: 36px;
+  font-size: 14px;
   color: #43609C;
 }
 .skylab .tracks {
@@ -24,14 +24,7 @@
 }
 .skylab .track {
   flex: 0 0 150px;
-  /*margin: 20px;*/
   width: 20%;
-/*  display: inline-block;
-  float:left;
-  height: 150px;
-  width: 120px;
-  margin: 15px;
-  overflow-y: hidden;*/
 }
 .skylab .track img {
   height:120px;
@@ -47,6 +40,28 @@
   display: inline-block;
   max-width: 120px;
   overflow-y: hidden;
+}
+
+.skylab #search,
+.skylab .search-start {
+  height: 30px;
+  font-size: 20px;
+}
+.skylab #search {
+  padding-left: 10px;
+}
+.skylab .search-start {
+  background: #4CC0D1;
+  color: #FFF;
+  border-radius: 5px;
+  border: 1px solid rgba(134, 134, 134, 0.55);
+  padding: 2px 10px;
+  line-height: 23px;
+  height: 34px;
+  display: inline-block;
+}
+.skylab .search-start:hover {
+    background: rgb(0, 222, 255);
 }
 
 /* Side-drawer

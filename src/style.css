@@ -56,6 +56,10 @@ a:hover {
   cursor: pointer;
 }
 
+.global-nav {
+  margin: 10px 0;
+}
+
 .global-nav,
 .title {
   font-family: 'Montserrat', Arial, Helvetice Neue, sans-serif;
@@ -74,6 +78,7 @@ a:hover {
   position: inherit;
   padding: 5%;
   margin: 5%;
+  margin-top: 30px;
   text-align: center;
 }
 
