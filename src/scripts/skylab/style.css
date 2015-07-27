@@ -1,13 +1,13 @@
 .skylab-body {
-  background-color: #8FDCC5;
+  background-color: #4CC0D1;
 }
 .skylab-body .app-content {
-  background-color: #dbdbdb;
+  background-color: #F2F2F2;
 }
 
 
 .skylab p {
-  font-size: 36px;
+  font-size: 14px;
   color: #43609C;
 }
 .skylab .tracks {
