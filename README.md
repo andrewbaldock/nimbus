@@ -1,7 +1,8 @@
 # Nimbus -- cloud frontend app seed
 ### contains sample app 'Skylab', a soundcloud search app
-
 Backbone, require, node, express
+
+http://andrewbaldock.com/nimbus
 
 ## Setup
 
